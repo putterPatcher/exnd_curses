@@ -6,7 +6,7 @@ setup(
     description="Simple use of curses.",
     author="Shantanu Kor",
     author_email="kor.shantanu1@gmail.com",
-    url="https://github.com/shantanu-kor/Deciml.git",
+    url="https://github.com/shantanu-kor/exnd-curses.git",
     packages=find_packages(),
     install_requires=[
         # List dependencies here
