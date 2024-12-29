@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="exnd-curses",
-    version="0.1.0",
+    version="0.1.1",
     description="Simple use of curses.",
     author="Shantanu Kor",
     author_email="kor.shantanu1@gmail.com",
