@@ -10,8 +10,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         # List dependencies here
-	windows-curses,
-	curses,
+	"windows-curses",
+	"curses",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
