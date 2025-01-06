@@ -21,6 +21,8 @@ class Window:
     def __scroll(self, code: int):
         # print(code, "???");
         if (self.__linesCount > self.__stdscr.getmaxyx()[0]):
+            if code == 27:
+                exit();
             if code == 451 or code == 339:
                 self.__printPrev();
             elif code == 457 or code == 338:
