@@ -5,7 +5,7 @@ try:
     line = "dasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\ndasda\nfdssf\ndsfsdf\ndsafsdf\ndsfsd\nLast";
     window.changeLines(line);
     # curses.napms(2000);
-    window.closeWindow();
+    # window.closeWindow();
     del window;
 except Exception as e:
     print(e);
