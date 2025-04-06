@@ -42,14 +42,18 @@ class Window:
         self.__checkKeyPressAction(key);
     
     def __getstr(self, m=True):
-        if self.__stdscr.getmaxyx()[0] >= self.__linesCount: self.__displayText(self.__lines);
+        if self.__stdscr.getmaxyx()[0] >= self.__linesCount:
+            lines = ""
+            for i in self.__lines:
+                lines += (i if len(i) <= (l:=self.__stdscr.getmaxyx()[1]) else i[:l-4]+"...") + "\n";
+            self.__displayText(lines);
         else:
-            str = ""
+            lines = ""
             for i in self.__lines[self.__linePtr: self.__stdscr.getmaxyx()[0] + self.__linePtr - 1]:
-                str += i + "\n";
+                lines += (i if len(i) <= (l:=self.__stdscr.getmaxyx()[1]) else i[:l-4]+"...") + "\n";
             if m==True:
-                str += "MORE---v";
-            self.__displayText(str);
+                lines += "MORE---v";
+            self.__displayText(lines);
 
     def __printNext(self):
         self.__linePtr = self.__linePtr if self.__linePtr == self.__linesCount - self.__stdscr.getmaxyx()[0] + 1 else self.__linePtr + 1;
@@ -63,11 +67,15 @@ class Window:
         self.__lines = lines.splitlines();
         self.__linesCount = len(self.__lines);
         self.__linePtr = 0;
-        if self.__stdscr.getmaxyx()[0] >= self.__linesCount: self.__displayText(self.__lines);
+        if self.__stdscr.getmaxyx()[0] >= self.__linesCount:
+            lines = ""
+            for i in self.__lines:
+                lines += (i if len(i) <= (l:=self.__stdscr.getmaxyx()[1]) else i[:l-4]+"...") + "\n";
+            self.__displayText(lines);
         else:
             lines = ""
             for i in self.__lines[self.__linePtr: self.__stdscr.getmaxyx()[0] + self.__linePtr - 1]:
-                lines += i + "\n";
+                lines += (i if len(i) <= (l:=self.__stdscr.getmaxyx()[1]) else i[:l-4]+"...") + "\n";
             lines += "MORE---v";
             self.__displayText(lines)
         key = self.__stdscr.getch();
