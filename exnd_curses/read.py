@@ -1,5 +1,5 @@
 import sys, os;
-from exnd_curses import window;
+import window;
 
 def main():
     file = "";
