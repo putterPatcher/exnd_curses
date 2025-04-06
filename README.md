@@ -6,6 +6,10 @@ fread file_name
 
 fread -h (--help)
 
+On ubuntu systems -
+
+gnome-terminal . -- fread file_name
+
 usage:
 
 page up -> move up
