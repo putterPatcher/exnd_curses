@@ -1,1 +1,4 @@
-from exnd_curses import test
+# pip install exnd_curses
+
+fread file_name
+fread -h (--help)
